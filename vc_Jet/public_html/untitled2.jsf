@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="untitled2.jsf" id="d1">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/oracle/templates/responsiveTemplate.jspx" id="pt1">
+                <f:facet name="header"/>
+                <f:facet name="status"/>
+                <f:facet name="appNav"/>
+                <f:facet name="globalLinks"/>
+                <f:facet name="footer"/>
+                <f:facet name="center">
+                    <af:panelGroupLayout id="pgl7" halign="center">
+                        <af:masonryLayout id="ml1">
+                            <af:panelGroupLayout id="pgl1" styleClass="AFMasonryTileSize2x1" layout="vertical"
+                                                 inlineStyle="color:AppWorkspace; background-color:Gray;"
+                                                 halign="center"/>
+                            <af:panelGroupLayout id="pgl3" styleClass="AFMasonryTileSize1x1" layout="vertical"
+                                                 inlineStyle="color:AppWorkspace; background-color:Gray;"
+                                                 halign="center"/>
+                            <af:panelGroupLayout id="pgl4" styleClass="AFMasonryTileSize1x1" layout="vertical"
+                                                 inlineStyle="color:AppWorkspace; background-color:Gray;"
+                                                 halign="center"/>
+                            <af:panelGroupLayout id="pgl5" styleClass="AFMasonryTileSize1x1" layout="vertical"
+                                                 inlineStyle="color:AppWorkspace; background-color:Gray;"
+                                                 halign="center"/>
+                            <af:panelGroupLayout id="pgl6" styleClass="AFMasonryTileSize1x1" layout="vertical"
+                                                 inlineStyle="color:AppWorkspace; background-color:Gray;"
+                                                 halign="center"/>
+                            <af:panelGroupLayout id="pgl2" styleClass="AFMasonryTileSize1x1" layout="vertical"
+                                                 inlineStyle="color:AppWorkspace; background-color:Gray;"
+                                                 halign="center"/>
+                            <af:panelGroupLayout id="pgl9" layout="vertical" styleClass="AFMasonryTileSize1x1"
+                                                 inlineStyle="color:AppWorkspace; background-color:Gray;"/>
+                            <af:panelGroupLayout id="pgl10" layout="vertical" styleClass="AFMasonryTileSize1x1"
+                                                 inlineStyle="color:AppWorkspace; background-color:Gray;"/>
+                            <af:panelGroupLayout id="pgl11" layout="vertical" styleClass="AFMasonryTileSize1x1"
+                                                 inlineStyle="color:AppWorkspace; background-color:Gray;"/>
+                            <af:panelGroupLayout id="pgl12" layout="vertical" styleClass="AFMasonryTileSize1x1"
+                                                 inlineStyle="color:AppWorkspace; background-color:Gray;"/>
+                            <af:panelGroupLayout id="pgl8" layout="vertical" styleClass="AFMasonryTileSize1x1"
+                                                 inlineStyle="color:AppWorkspace; background-color:Gray;"/>
+                        </af:masonryLayout>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="start"/>
+                <f:facet name="end"/>
+                <f:attribute name="endWidth" value="0"/>
+                <f:attribute name="showAppNavbar" value="false"/>
+                <f:attribute name="startWidth" value="0"/>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:ui="http://java.sun.com/jsf/facelets">
+    <document title="ManulResp.jsf" xmlns="http://xmlns.oracle.com/adf/faces/rich">
+        <messages id="m1"/>
+        <form>
+            <pageTemplate viewId="/oracle/templates/responsiveTemplate.jspx">
+                <f:facet name="header"/>
+                <f:facet name="status"/>
+                <f:facet name="appNav"/>
+                <f:facet name="globalLinks"/>
+                <f:facet name="footer"/>
+                <f:facet name="center">
+                    <panelTabbed position="above" id="pt1">
+                        <showDetailItem id="tab1" text="o">
+                            <panelSplitter id="ps1">
+                                <matchMediaBehavior matchedPropertyValue="vertical"
+                                                    mediaQuery="screen and (max-width: 450px)"
+                                                    propertyName="orientation"/>
+                                <f:facet name="first">
+                                    <panelGroupLayout id="pgl1">
+                                        <outputText value="outputText1" id="ot12"/>
+                                        <table value="#{bindings.DepartmentsView1.collectionModel}" var="row"
+                                               rows="#{bindings.DepartmentsView1.rangeSize}"
+                                               emptyText="#{bindings.DepartmentsView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                               rowBandingInterval="0"
+                                               selectedRowKeys="#{bindings.DepartmentsView1.collectionModel.selectedRow}"
+                                               selectionListener="#{bindings.DepartmentsView1.collectionModel.makeCurrent}"
+                                               rowSelection="single" fetchSize="#{bindings.DepartmentsView1.rangeSize}"
+                                               id="t1">
+                                            <column headerText="#{bindings.DepartmentsView1.hints.DepartmentId.label}"
+                                                    id="c1">
+                                                <inputText value="#{row.bindings.DepartmentId.inputValue}"
+                                                           label="#{bindings.DepartmentsView1.hints.DepartmentId.label}"
+                                                           required="#{bindings.DepartmentsView1.hints.DepartmentId.mandatory}"
+                                                           columns="#{bindings.DepartmentsView1.hints.DepartmentId.displayWidth}"
+                                                           maximumLength="#{bindings.DepartmentsView1.hints.DepartmentId.precision}"
+                                                           shortDesc="#{bindings.DepartmentsView1.hints.DepartmentId.tooltip}"
+                                                           id="it1">
+                                                    <f:validator binding="#{row.bindings.DepartmentId.validator}"/>
+                                                    <convertNumber groupingUsed="false"
+                                                                   pattern="#{bindings.DepartmentsView1.hints.DepartmentId.format}"/>
+                                                </inputText>
+                                            </column>
+                                            <column headerText="#{bindings.DepartmentsView1.hints.DepartmentName.label}"
+                                                    id="c2">
+                                                <inputText value="#{row.bindings.DepartmentName.inputValue}"
+                                                           label="#{bindings.DepartmentsView1.hints.DepartmentName.label}"
+                                                           required="#{bindings.DepartmentsView1.hints.DepartmentName.mandatory}"
+                                                           columns="#{bindings.DepartmentsView1.hints.DepartmentName.displayWidth}"
+                                                           maximumLength="#{bindings.DepartmentsView1.hints.DepartmentName.precision}"
+                                                           shortDesc="#{bindings.DepartmentsView1.hints.DepartmentName.tooltip}"
+                                                           id="it2">
+                                                    <f:validator binding="#{row.bindings.DepartmentName.validator}"/>
+                                                </inputText>
+                                            </column>
+                                            <column headerText="#{bindings.DepartmentsView1.hints.ManagerId.label}"
+                                                    id="c3">
+                                                <inputText value="#{row.bindings.ManagerId.inputValue}"
+                                                           label="#{bindings.DepartmentsView1.hints.ManagerId.label}"
+                                                           required="#{bindings.DepartmentsView1.hints.ManagerId.mandatory}"
+                                                           columns="#{bindings.DepartmentsView1.hints.ManagerId.displayWidth}"
+                                                           maximumLength="#{bindings.DepartmentsView1.hints.ManagerId.precision}"
+                                                           shortDesc="#{bindings.DepartmentsView1.hints.ManagerId.tooltip}"
+                                                           id="it3">
+                                                    <f:validator binding="#{row.bindings.ManagerId.validator}"/>
+                                                    <convertNumber groupingUsed="false"
+                                                                   pattern="#{bindings.DepartmentsView1.hints.ManagerId.format}"/>
+                                                </inputText>
+                                            </column>
+                                            <column headerText="#{bindings.DepartmentsView1.hints.LocationId.label}"
+                                                    id="c4">
+                                                <inputText value="#{row.bindings.LocationId.inputValue}"
+                                                           label="#{bindings.DepartmentsView1.hints.LocationId.label}"
+                                                           required="#{bindings.DepartmentsView1.hints.LocationId.mandatory}"
+                                                           columns="#{bindings.DepartmentsView1.hints.LocationId.displayWidth}"
+                                                           maximumLength="#{bindings.DepartmentsView1.hints.LocationId.precision}"
+                                                           shortDesc="#{bindings.DepartmentsView1.hints.LocationId.tooltip}"
+                                                           id="it4">
+                                                    <f:validator binding="#{row.bindings.LocationId.validator}"/>
+                                                    <convertNumber groupingUsed="false"
+                                                                   pattern="#{bindings.DepartmentsView1.hints.LocationId.format}"/>
+                                                </inputText>
+                                            </column>
+                                        </table>
+                                    </panelGroupLayout>
+                                </f:facet>
+                                <f:facet name="second">
+                                    <table value="#{bindings.EmployeesView1.collectionModel}" var="row"
+                                           rows="#{bindings.EmployeesView1.rangeSize}"
+                                           emptyText="#{bindings.EmployeesView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                           rowBandingInterval="0"
+                                           selectedRowKeys="#{bindings.EmployeesView1.collectionModel.selectedRow}"
+                                           selectionListener="#{bindings.EmployeesView1.collectionModel.makeCurrent}"
+                                           rowSelection="single" fetchSize="#{bindings.EmployeesView1.rangeSize}"
+                                           id="t2">
+                                        <column headerText="#{bindings.EmployeesView1.hints.EmployeeId.label}" id="c5">
+                                            <outputText value="#{row.EmployeeId}"
+                                                        shortDesc="#{bindings.EmployeesView1.hints.EmployeeId.tooltip}"
+                                                        id="ot1">
+                                                <convertNumber groupingUsed="false"
+                                                               pattern="#{bindings.EmployeesView1.hints.EmployeeId.format}"/>
+                                            </outputText>
+                                        </column>
+                                        <column headerText="#{bindings.EmployeesView1.hints.FirstName.label}" id="c6">
+                                            <outputText value="#{row.FirstName}"
+                                                        shortDesc="#{bindings.EmployeesView1.hints.FirstName.tooltip}"
+                                                        id="ot2"/>
+                                        </column>
+                                        <column headerText="#{bindings.EmployeesView1.hints.LastName.label}" id="c7">
+                                            <outputText value="#{row.LastName}"
+                                                        shortDesc="#{bindings.EmployeesView1.hints.LastName.tooltip}"
+                                                        id="ot3"/>
+                                        </column>
+                                        <column headerText="#{bindings.EmployeesView1.hints.Email.label}" id="c8">
+                                            <outputText value="#{row.Email}"
+                                                        shortDesc="#{bindings.EmployeesView1.hints.Email.tooltip}"
+                                                        id="ot4"/>
+                                        </column>
+                                        <column headerText="#{bindings.EmployeesView1.hints.PhoneNumber.label}" id="c9">
+                                            <outputText value="#{row.PhoneNumber}"
+                                                        shortDesc="#{bindings.EmployeesView1.hints.PhoneNumber.tooltip}"
+                                                        id="ot5"/>
+                                        </column>
+                                        <column headerText="#{bindings.EmployeesView1.hints.HireDate.label}" id="c10">
+                                            <outputText value="#{row.HireDate}"
+                                                        shortDesc="#{bindings.EmployeesView1.hints.HireDate.tooltip}"
+                                                        id="ot6">
+                                                <convertDateTime pattern="#{bindings.EmployeesView1.hints.HireDate.format}"/>
+                                            </outputText>
+                                        </column>
+                                        <column headerText="#{bindings.EmployeesView1.hints.JobId.label}" id="c11">
+                                            <outputText value="#{row.JobId}"
+                                                        shortDesc="#{bindings.EmployeesView1.hints.JobId.tooltip}"
+                                                        id="ot7"/>
+                                        </column>
+                                        <column headerText="#{bindings.EmployeesView1.hints.Salary.label}" id="c12">
+                                            <outputText value="#{row.Salary}"
+                                                        shortDesc="#{bindings.EmployeesView1.hints.Salary.tooltip}"
+                                                        id="ot8">
+                                                <convertNumber groupingUsed="false"
+                                                               pattern="#{bindings.EmployeesView1.hints.Salary.format}"/>
+                                            </outputText>
+                                        </column>
+                                        <column headerText="#{bindings.EmployeesView1.hints.CommissionPct.label}"
+                                                id="c13">
+                                            <outputText value="#{row.CommissionPct}"
+                                                        shortDesc="#{bindings.EmployeesView1.hints.CommissionPct.tooltip}"
+                                                        id="ot9">
+                                                <convertNumber groupingUsed="false"
+                                                               pattern="#{bindings.EmployeesView1.hints.CommissionPct.format}"/>
+                                            </outputText>
+                                        </column>
+                                        <column headerText="#{bindings.EmployeesView1.hints.ManagerId.label}" id="c14">
+                                            <outputText value="#{row.ManagerId}"
+                                                        shortDesc="#{bindings.EmployeesView1.hints.ManagerId.tooltip}"
+                                                        id="ot10">
+                                                <convertNumber groupingUsed="false"
+                                                               pattern="#{bindings.EmployeesView1.hints.ManagerId.format}"/>
+                                            </outputText>
+                                        </column>
+                                        <column headerText="#{bindings.EmployeesView1.hints.DepartmentId.label}"
+                                                id="c15">
+                                            <outputText value="#{row.DepartmentId}"
+                                                        shortDesc="#{bindings.EmployeesView1.hints.DepartmentId.tooltip}"
+                                                        id="ot11">
+                                                <convertNumber groupingUsed="false"
+                                                               pattern="#{bindings.EmployeesView1.hints.DepartmentId.format}"/>
+                                            </outputText>
+                                        </column>
+                                    </table>
+                                </f:facet>
+                            </panelSplitter>
+                        </showDetailItem>
+                        <showDetailItem id="tab2" text="o">
+                            <panelDashboard id="pd1" columns="3">
+                                
+                              
+                                <panelBox text="oo" id="pb4" showDisclosure="false" background="medium" type="stretch">
+                                    <f:facet name="toolbar"/>
+                                </panelBox>
+                                <panelBox text="oo" id="pb1" showDisclosure="false" background="medium" type="stretch">
+                                    <f:facet name="toolbar"/>
+                                </panelBox>
+                                <panelBox text="oo" id="pb2" showDisclosure="false" background="medium" type="stretch">
+                                    <f:facet name="toolbar"/>
+                                </panelBox>
+                                <panelBox text="oo" id="pb3" showDisclosure="false" background="medium" type="stretch">
+                                    <f:facet name="toolbar"/>
+                                </panelBox>
+                                <panelBox text="oo" id="pb6" showDisclosure="false" background="medium" type="stretch">
+                                    <f:facet name="toolbar"/>
+                                </panelBox>
+                                <panelBox text="oo" id="pb7" showDisclosure="false" background="medium" type="stretch">
+                                    <f:facet name="toolbar"/>
+                                </panelBox>
+                                <panelBox text="oo" id="pb8" showDisclosure="false" background="medium" type="stretch">
+                                    <f:facet name="toolbar"/>
+                                </panelBox>
+                                <panelBox text="oo" id="pb5" showDisclosure="false" background="medium" type="stretch">
+                                    <f:facet name="toolbar"/>
+                                </panelBox>
+                                <ui:insert/>
+                            </panelDashboard>
+                        </showDetailItem>
+                        <showDetailItem id="tab3" text="o">
+                            <panelGridLayout id="pgl2" inlineStyle="grid-column:2.0;">
+                                <gridRow marginTop="5px" height="auto" id="gr1">
+                                    <gridCell marginStart="5px" width="34%" id="gc1" valign="stretch"
+                                              inlineStyle="color:ActiveCaption;">
+                                        <panelBox text="PanelBox1" id="pb9">
+                                            <f:facet name="toolbar"/>
+                                        </panelBox>
+                                    </gridCell>
+                                    <gridCell marginStart="5px" width="33%" id="gc2" valign="stretch"
+                                              inlineStyle="color:ActiveCaption;">
+                                        <panelBox text="PanelBox3" id="pb11">
+                                            <f:facet name="toolbar"/>
+                                        </panelBox>
+                                    </gridCell>
+                                    <gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc3" valign="stretch"
+                                              inlineStyle="color:ActiveCaption;">
+                                        <panelBox text="PanelBox4" id="pb10">
+                                            <f:facet name="toolbar"/>
+                                        </panelBox>
+                                    </gridCell>
+                                </gridRow>
+                                <gridRow marginTop="5px" height="auto" id="gr2">
+                                    <gridCell marginStart="5px" width="34%" id="gc4" inlineStyle="color:Navy;"
+                                              halign="stretch">
+                                        <panelBox text="PanelBox5" id="pb12">
+                                            <f:facet name="toolbar"/>
+                                        </panelBox>
+                                    </gridCell>
+                                    <gridCell marginStart="5px" width="33%" id="gc5" inlineStyle="color:Navy;"
+                                              halign="stretch">
+                                        <panelBox text="PanelBox6" id="pb13">
+                                            <f:facet name="toolbar"/>
+                                        </panelBox>
+                                    </gridCell>
+                                    <gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc6"
+                                              inlineStyle="color:Navy;" halign="stretch">
+                                        <panelBox text="PanelBox7" id="pb14">
+                                            <f:facet name="toolbar"/>
+                                        </panelBox>
+                                    </gridCell>
+                                </gridRow>
+                                <gridRow marginTop="5px" height="auto" id="gr3">
+                                    <gridCell marginStart="5px" width="34%" id="gc7"/>
+                                    <gridCell marginStart="5px" width="33%" id="gc8"/>
+                                    <gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc9"/>
+                                </gridRow>
+                                <gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+                                    <gridCell marginStart="5px" width="34%" id="gc10"/>
+                                    <gridCell marginStart="5px" width="33%" id="gc11"/>
+                                    <gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc12"/>
+                                </gridRow>
+                            </panelGridLayout>
+                        </showDetailItem>
+                    </panelTabbed>
+                </f:facet>
+                <f:facet name="start"/>
+                <f:facet name="end"/>
+            </pageTemplate>
+        </form>
+    </document>
+</f:view>

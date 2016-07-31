@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="page4.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/oracle/templates/responsiveTemplate.jspx" id="pt1">
+                <f:facet name="header"/>
+                <f:facet name="status"/>
+                <f:facet name="appNav"/>
+                <f:facet name="globalLinks"/>
+                <f:facet name="footer"/>
+                <f:facet name="center">
+                    <af:panelTabbed position="above" id="pt3">
+                    
+                        <af:showDetailItem id="tab5" text="Tab Label 5"/>
+                        <af:showDetailItem id="tab6" text="Tab Label 6"/>
+                        <af:showDetailItem id="tab7" text="Tab Label 7"/>
+                        <af:showDetailItem id="tab8" text="Tab Label 8"/>
+                    </af:panelTabbed>
+                </f:facet>
+                <f:facet name="start">
+                    <af:panelDrawer position="end" id="pd1">
+                        <af:showDetailItem id="dr1" shortDesc="Drawer 1">
+                            <af:table value="#{bindings.DepartmentsView1.collectionModel}" var="row"
+                                      rows="#{bindings.DepartmentsView1.rangeSize}"
+                                      emptyText="#{bindings.DepartmentsView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.DepartmentsView1.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.DepartmentsView1.collectionModel.makeCurrent}"
+                                      rowSelection="single" fetchSize="#{bindings.DepartmentsView1.rangeSize}" id="t1">
+                                <af:column headerText="#{bindings.DepartmentsView1.hints.DepartmentId.label}" id="c1">
+                                    <af:outputText value="#{row.DepartmentId}"
+                                                   shortDesc="#{bindings.DepartmentsView1.hints.DepartmentId.tooltip}"
+                                                   id="ot1">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.DepartmentsView1.hints.DepartmentId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.DepartmentsView1.hints.DepartmentName.label}" id="c2">
+                                    <af:outputText value="#{row.DepartmentName}"
+                                                   shortDesc="#{bindings.DepartmentsView1.hints.DepartmentName.tooltip}"
+                                                   id="ot2"/>
+                                </af:column>
+                                <af:column headerText="#{bindings.DepartmentsView1.hints.ManagerId.label}" id="c3">
+                                    <af:outputText value="#{row.ManagerId}"
+                                                   shortDesc="#{bindings.DepartmentsView1.hints.ManagerId.tooltip}"
+                                                   id="ot3">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.DepartmentsView1.hints.ManagerId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.DepartmentsView1.hints.LocationId.label}" id="c4">
+                                    <af:outputText value="#{row.LocationId}"
+                                                   shortDesc="#{bindings.DepartmentsView1.hints.LocationId.tooltip}"
+                                                   id="ot4">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.DepartmentsView1.hints.LocationId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                            </af:table>
+                        </af:showDetailItem>
+                        <af:showDetailItem id="dr2" shortDesc="Drawer 2"/>
+                        <af:showDetailItem id="dr3" shortDesc="Drawer 3">
+                            <af:listView value="#{bindings.DepartmentsView11.collectionModel}" var="item"
+                                         emptyText="#{bindings.DepartmentsView11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                         fetchSize="#{bindings.DepartmentsView11.rangeSize}" id="lv1">
+                                <af:listItem id="li1">
+                                    <af:panelGridLayout id="pgl1">
+                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+                                            <af:gridCell marginStart="5px" width="80%" id="gc1">
+                                                <af:outputFormatted value="#{item.bindings.DepartmentName.inputValue}"
+                                                                    id="of1"/>
+                                            </af:gridCell>
+                                            <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc2">
+                                                <af:outputFormatted value="#{item.bindings.DepartmentId.inputValue}"
+                                                                    id="of2">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.DepartmentsView11.hints.DepartmentId.format}"/>
+                                                </af:outputFormatted>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
+                                </af:listItem>
+                            </af:listView>
+                        </af:showDetailItem>
+                    </af:panelDrawer>
+                </f:facet>
+                <f:facet name="end">
+                    <af:panelTabbed position="start" id="pt2">
+                   
+                        <af:showDetailItem id="tab1" text="o"/>
+                        <af:showDetailItem id="tab2" text="o"/>
+                        <af:showDetailItem id="tab3" text="o"/>
+                        <af:showDetailItem id="tab4" text="o"/>
+                    </af:panelTabbed>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

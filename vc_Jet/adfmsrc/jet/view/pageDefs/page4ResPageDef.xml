@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31" id="page4ResPageDef"
+                Package="jet.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="DepartmentsView1" RangeSize="25" DataControl="AppModuleDataControl" id="DepartmentsView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="DepartmentsView1Iterator" id="DepartmentsView1">
+      <nodeDefinition DefName="jet.model.view.DepartmentsView" Name="DepartmentsView10">
+        <AttrNames>
+          <Item Value="DepartmentId"/>
+          <Item Value="DepartmentName"/>
+          <Item Value="ManagerId"/>
+          <Item Value="LocationId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="DepartmentsView1Iterator" id="DepartmentsView11">
+      <nodeDefinition DefName="jet.model.view.DepartmentsView" Name="DepartmentsView110">
+        <AttrNames>
+          <Item Value="DepartmentName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="DepartmentsView1Iterator" id="DepartmentsView12">
+      <nodeDefinition DefName="jet.model.view.DepartmentsView" Name="DepartmentsView120">
+        <AttrNames>
+          <Item Value="DepartmentId"/>
+          <Item Value="DepartmentName"/>
+          <Item Value="ManagerId"/>
+          <Item Value="LocationId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="DepartmentsView1Iterator" id="DepartmentsView13">
+      <nodeDefinition DefName="jet.model.view.DepartmentsView" Name="DepartmentsView130">
+        <AttrNames>
+          <Item Value="DepartmentName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="pageALta4.jsf" id="d1">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/oracle/templates/responsiveTemplate.jspx" id="pt1">
+                <f:facet name="header"/>
+                <f:facet name="status"/>
+                <f:facet name="appNav"/>
+                <f:facet name="globalLinks"/>
+                <f:facet name="footer"/>
+                <f:facet name="center">
+                    <af:panelDashboard id="pd1" clientComponent="true" inlineStyle="overflow-wrap:break-word;">
+                        <af:panelBox text="O" id="pb1" background="dark" showDisclosure="false" titleHalign="center">
+                            <f:facet name="toolbar"/>
+                        </af:panelBox>
+                        <af:panelBox text="O" id="pb2" background="dark" showDisclosure="false" titleHalign="center">
+                            <f:facet name="toolbar"/>
+                        </af:panelBox>
+                        <af:panelBox text="O" id="pb3" background="dark" showDisclosure="false" titleHalign="center">
+                            <f:facet name="toolbar"/>
+                        </af:panelBox>
+                        <af:panelBox text="O" id="pb4" background="dark" showDisclosure="false" titleHalign="center">
+                            <f:facet name="toolbar"/>
+                        </af:panelBox>
+                    </af:panelDashboard>
+                </f:facet>
+                <f:facet name="start"/>
+                <f:facet name="end"/>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

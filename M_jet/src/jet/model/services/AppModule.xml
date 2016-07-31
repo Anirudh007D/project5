@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="DepartmentsView1"
+    ViewObjectName="jet.model.view.DepartmentsView"/>
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="jet.model.view.EmployeesView"/>
+  <ViewUsage
+    Name="DepartmentsView2"
+    ViewObjectName="jet.model.view.DepartmentsView"/>
+  <ViewUsage
+    Name="EmployeesView2"
+    ViewObjectName="jet.model.view.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesView3"
+    ViewObjectName="jet.model.view.EmployeesView"/>
+  <ViewLinkUsage
+    Name="DeptMgrFkLink1"
+    ViewLinkObjectName="jet.model.view.DeptMgrFkLink"
+    SrcViewUsageName="jet.model.services.AppModule.EmployeesView1"
+    DstViewUsageName="jet.model.services.AppModule.DepartmentsView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="jet.model.view.EmpManagerFkLink"
+    SrcViewUsageName="jet.model.services.AppModule.EmployeesView1"
+    DstViewUsageName="jet.model.services.AppModule.EmployeesView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpDeptFkLink1"
+    ViewLinkObjectName="jet.model.view.EmpDeptFkLink"
+    SrcViewUsageName="jet.model.services.AppModule.DepartmentsView1"
+    DstViewUsageName="jet.model.services.AppModule.EmployeesView3"
+    Reversed="false"/>
+</AppModule>

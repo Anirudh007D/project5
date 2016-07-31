@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="page2.jsf" id="d1">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/oracle/templates/responsiveTemplate.jspx" id="pt1">
+                <f:facet name="header"/>
+                <f:facet name="status"/>
+                <f:facet name="appNav"/>
+                <f:facet name="globalLinks"/>
+                <f:facet name="footer"/>
+                <f:facet name="center">
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow marginTop="5px" height="auto" id="gr1">
+                            <af:gridCell marginStart="5px" width="34%" id="gc1" halign="stretch">
+                                <af:panelBox text="Ani" id="pb1" background="dark" showDisclosure="false">
+                                    <f:facet name="toolbar"/>
+                                </af:panelBox>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="33%" id="gc2" halign="stretch">
+                                <af:panelBox text="Ani" id="pb2" background="dark" showDisclosure="false">
+                                    <f:facet name="toolbar"/>
+                                </af:panelBox>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc3" halign="stretch">
+                                <af:panelBox text="Ani" id="pb3" background="dark" showDisclosure="false">
+                                    <f:facet name="toolbar"/>
+                                </af:panelBox>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
+                            <af:gridCell marginStart="5px" width="34%" id="gc4" halign="stretch">
+                                <af:panelBox text="Ani" id="pb4" background="dark" showDisclosure="false">
+                                    <f:facet name="toolbar"/>
+                                </af:panelBox>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="33%" id="gc5" halign="stretch">
+                                <af:panelBox text="Ani" id="pb5" background="dark" showDisclosure="false">
+                                    <f:facet name="toolbar"/>
+                                </af:panelBox>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc6" halign="stretch">
+                                <af:panelBox text="Ani" id="pb6" background="dark" showDisclosure="false">
+                                    <f:facet name="toolbar"/>
+                                </af:panelBox>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+                <f:facet name="start"/>
+                <f:facet name="end"/>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>
